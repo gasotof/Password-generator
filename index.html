@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emoji Password Generator</title>
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
+    <div class="container">
+  <h1>🔐 Emoji Password Generator</h1>
+
+  <!-- Emojis -->
+  <div class="input-group">
+    <label>
+      <input type="checkbox" id="useEmojis"  onchange="toggleSlider('useEmojis', 'emojiLength')"> Emojis
+      <span><span id="emojiVal">0</span></span>
+    </label>
+<input type="range" class="slider-emoji" id="emojiLength" min="1" max="16" value="0" oninput="updateSliderValue('emojiLength', 'emojiVal')">
+  </div>
+
+  <!-- Symbols -->
+  <div class="input-group">
+    <label>
+      <input type="checkbox" id="useSymbols"  onchange="toggleSlider('useSymbols', 'symbolsLength')"> Symbols
+      <span><span id="symbolsVal">0</span></span>
+    </label>
+<input type="range" class="slider-symbol" id="symbolsLength" min="1" max="20" value="0" oninput="updateSliderValue('symbolsLength', 'symbolsVal')">
+  </div>
+
+  <!-- Letters -->
+  <div class="input-group">
+    <label>
+<input type="checkbox" id="useLetters" onchange="toggleSlider('useLetters', 'letterLength', 'letterOptions')">
+      <span><span id="letterVal">0</span></span>
+    </label>
+<input type="range" class="slider-letter" id="letterLength" min="1" max="20" value="0" oninput="updateSliderValue('letterLength', 'letterVal')">
+  </div>
+
+  <!-- Letter Options -->
+<div class="input-group" id="letterOptions">
+  <label><input type="checkbox" id="useLowercase" > Lowercase</label>
+  <label><input type="checkbox" id="useUppercase" > Uppercase</label>
+  <label><input type="checkbox" id="useNumbers" > Numbers</label>
+</div>
+
+  <!-- Generate -->
+  <button onclick="generatePassword()">Generate</button>
+  <div class="output" id="output"></div>
+  <button class="copy-button" onclick="copyToClipboard()">📋 Copy</button>
+  <div id="copiedMsg" class="copied-msg"></div>
+</div>
 
 
-
-
-
-    
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
 </body>
+
 </html>
