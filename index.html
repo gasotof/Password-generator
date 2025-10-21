@@ -1,18 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emoji Password Generator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Contraseñas con Emojis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <script src="main.js"></script>
-    <h1> hola</h1>
-    <h2>Hola2</h2>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
+  <div class="password-generator card bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+    <h1 class="password-generator__title text-3xl font-bold text-center mb-6">Generador de Emojis</h1>
 
+    <label class="password-generator__label block mb-2 font-semibold" for="complexity">Selecciona la complejidad:</label>
+    <select id="complexity" class="password-generator__select block w-full mb-6 p-3 border rounded-lg border-gray-300 text-lg">
+      <option value="1">Fácil (1 emoji)</option>
+      <option value="2">Normal (2 emojis)</option>
+      <option value="3">Difícil (3 emojis)</option>
+      <option value="4">Super difícil (4 emojis)</option>
+    </select>
 
-    
+    <!-- Botones por nivel de dificultad con colores y tamaño -->
+    <div class="flex flex-col gap-4 mb-6">
+      <button class="password-generator__button bg-green-400 hover:bg-green-500 text-white text-xl py-3 rounded-lg">Fácil ✅</button>
+      <button class="password-generator__button bg-yellow-400 hover:bg-yellow-500 text-white text-xl py-3 rounded-lg">Normal ⚡</button>
+      <button class="password-generator__button bg-orange-500 hover:bg-orange-600 text-white text-xl py-3 rounded-lg">Difícil 🔥</button>
+      <button class="password-generator__button bg-red-500 hover:bg-red-600 text-white text-xl py-3 rounded-lg">Super difícil 💀</button>
+    </div>
+
+    <!-- Área de salida de la contraseña -->
+    <div class="password-generator__output text-center text-2xl font-mono bg-gray-100 p-6 rounded-2xl min-h-[4rem]">
+      🎯
+    </div>
+  </div>
+
+  <!-- Script para funcionalidad futura -->
+  <script src="main.js"></script>
+
 </body>
-</html>git
+</html>
