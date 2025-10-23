@@ -8,4 +8,4 @@ const getEmojiPassword = (length) => {
   return password.join('');
 }
 
-console.log(getEmojiPassword(3));
+console.log(getEmojiPassword(11));
