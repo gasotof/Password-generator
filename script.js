@@ -15,4 +15,4 @@ const getEmojiPassword = (length) => {
   return password.join('');
 }
 
-
+console.log(getEmojiPassword(1)); 
