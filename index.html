@@ -3,101 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emoji Password Generator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg-gray-900 text-gray-200 flex flex-col min-h-screen items-center justify-center p-4 selection:bg-blue-500 selection:text-white">
-
-    <div class="w-full max-w-2xl mx-auto">
-        <!-- Header -->
-        <header class="text-center mb-8">
-            <h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">Emoji Password Generator</h1>
-            <p class="text-gray-400 mt-2">Create secure and memorable passwords with a touch of fun.</p>
-        </header>
-
-        <!-- Main Content -->
-        <main class="bg-gray-800 p-6 md:p-8 rounded-2xl shadow-2xl shadow-blue-500/10 space-y-6">
-            <!-- Password Display and Actions -->
-            <div class="flex items-center space-x-4 bg-gray-900 p-4 rounded-lg">
-                <p id="password-display" class="flex-grow text-lg md:text-xl font-mono truncate">Click Generate!</p>
-                <button id="copy-button" class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 active:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
-                    Copy
-                </button>
-            </div>
-
-            <!-- Controls -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Length Slider -->
-                <div class="space-y-2">
-                    <div class="flex justify-between items-center">
-                        <label for="length-slider" class="font-medium">Password Length</label>
-                        <span id="length-value" class="font-mono bg-gray-700 text-blue-300 px-2 py-1 rounded-md text-sm">16</span>
-                    </div>
-                    <input id="length-slider" type="range" min="8" max="32" value="16" class="w-full">
-                </div>
-
-                <!-- Uppercase Slider -->
-                <div class="space-y-2">
-                    <div class="flex justify-between items-center">
-                        <label for="uppercase-slider" class="font-medium">Uppercase Letters</label>
-                        <span id="uppercase-value" class="font-mono bg-gray-700 text-blue-300 px-2 py-1 rounded-md text-sm">4</span>
-                    </div>
-                    <input id="uppercase-slider" type="range" min="0" max="10" value="4" class="w-full">
-                </div>
-                
-                <!-- Numbers Slider -->
-                <div class="space-y-2">
-                    <div class="flex justify-between items-center">
-                        <label for="numbers-slider" class="font-medium">Numbers</label>
-                        <span id="numbers-value" class="font-mono bg-gray-700 text-blue-300 px-2 py-1 rounded-md text-sm">4</span>
-                    </div>
-                    <input id="numbers-slider" type="range" min="0" max="10" value="4" class="w-full">
-                </div>
-                
-                <!-- Special Characters Slider -->
-                <div class="space-y-2">
-                    <div class="flex justify-between items-center">
-                        <label for="special-slider" class="font-medium">Special Characters</label>
-                        <span id="special-value" class="font-mono bg-gray-700 text-blue-300 px-2 py-1 rounded-md text-sm">2</span>
-                    </div>
-                    <input id="special-slider" type="range" min="0" max="10" value="2" class="w-full">
-                </div>
-                
-                <!-- Emojis Slider -->
-                <div class="space-y-2 col-span-1 md:col-span-2">
-                    <div class="flex justify-between items-center">
-                        <label for="emoji-slider" class="font-medium">Emojis</label>
-                        <span id="emoji-value" class="font-mono bg-gray-700 text-blue-300 px-2 py-1 rounded-md text-sm">2</span>
-                    </div>
-                    <input id="emoji-slider" type="range" min="0" max="10" value="2" class="w-full">
-                </div>
-            </div>
-
-            <!-- Generate Button -->
-            <button id="generate-button" class="w-full py-3 mt-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-lg rounded-lg hover:from-blue-600 hover:to-purple-700 active:scale-95 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-opacity-75">
-                Generate New Password
-            </button>
-        </main>
-    </div>
-
-    <!-- Judgement Dialog -->
-    <div id="judgement-dialog" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4 hidden">
-        <div class="bg-gray-800 rounded-2xl shadow-xl p-8 max-w-sm w-full text-center border border-gray-700">
-            <h3 id="judgement-title" class="text-2xl font-bold text-blue-400 mb-2"></h3>
-            <p id="judgement-message" class="text-gray-300 mb-6"></p>
-            <button id="close-dialog-button" class="px-6 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors duration-200">Got it!</button>
-        </div>
-    </div>
+    <title>Document</title>
+  <script type="module" src="script.js"></script>
     
-    <!-- Footer -->
-    <footer class="text-center text-gray-500 mt-12 w-full max-w-2xl mx-auto">
-        <div class="bg-gray-800/50 rounded-t-xl p-6">
-            <h3 class="text-lg font-semibold text-gray-400 mb-2">About Us</h3>
-            <p class="text-sm">We are passionate about digital security. This tool was created to help everyone generate strong, unique passwords effortlessly. We believe security should be accessible to all, and maybe even a little fun. Stay safe online!</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+</head>
+<body>
+  !  
 </body>
 </html>
