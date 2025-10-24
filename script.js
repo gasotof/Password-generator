@@ -1,11 +1,9 @@
 import getRandomEmoji from "./RANDOM_EMOJI.js";
 
-const getEmojiPassword = (length) => {
-  let password = [];
+export const getEmojiPassword = (length) => {
+  const password = [];
   for (let i = 0; i < length; i++) {
-    password.push(getRandomEmoji()); 
+    password.push(getRandomEmoji());
   }
-  return password.join('');
-}
-
-console.log(getEmojiPassword(11));
+  return password.join(' ');
+};
