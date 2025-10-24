@@ -1,11 +1,9 @@
 import { getEmojiPassword } from './script.js';
 
-// DOM references
 const generateButton = document.getElementById('generate-btn');
 const emojiInput = document.getElementById('emoji-input');
 const copyButton = document.getElementById('copy-btn');
 
-// Confetti/emoji setup (uses global from CDN)
 const defaults = {
   spread: 360,
   ticks: 100,
@@ -14,7 +12,7 @@ const defaults = {
   startVelocity: 30,
 };
 
-function shoot() {
+const shoot = () => {
   const conf = window.confetti || (typeof confetti !== 'undefined' ? confetti : null);
   if (!conf) return;
 
@@ -24,30 +22,26 @@ function shoot() {
     scalar: 2,
     shapes: ['emoji'],
   });
-}
+};
 
-// Generate click handler (password + animations)
-function onGenerateClick() {
+const onGenerateClick = () => {
   const checkedInput = document.querySelector('input[name="password-length"]:checked');
   const passwordLength = parseInt(checkedInput.value, 10);
 
   const newPassword = getEmojiPassword(passwordLength);
   emojiInput.value = newPassword;
 
-  // Yellow glow burst
   generateButton.classList.remove('blast');
-  void generateButton.offsetWidth; // restart animation
+  void generateButton.offsetWidth;
   generateButton.classList.add('blast');
   setTimeout(() => generateButton.classList.remove('blast'), 700);
 
-  // Emoji bursts
   setTimeout(shoot, 0);
   setTimeout(shoot, 100);
   setTimeout(shoot, 200);
-}
+};
 
-// Copy handler
-function onCopyClick() {
+const onCopyClick = () => {
   const passwordToCopy = emojiInput.value;
 
   navigator.clipboard.writeText(passwordToCopy)
@@ -59,13 +53,11 @@ function onCopyClick() {
       copyButton.textContent = 'Error ❌';
       setTimeout(() => { copyButton.textContent = 'Copy 📋'; }, 1500);
     });
-}
+};
 
-// Wire events
 generateButton.addEventListener('click', onGenerateClick);
 copyButton.addEventListener('click', onCopyClick);
 
-// Initial password on load
 const initialCheckedInput = document.querySelector('input[name="password-length"]:checked');
 const initialLength = parseInt(initialCheckedInput.value, 10);
 emojiInput.value = getEmojiPassword(initialLength);
