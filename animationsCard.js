@@ -1,4 +1,4 @@
-import { getEmojiPassword } from './script.js';
+// js/animationsCard.js
 
 const generateButton = document.getElementById('generate-btn');
 const emojiInput = document.getElementById('emoji-input');
@@ -12,23 +12,22 @@ const defaults = {
   startVelocity: 30,
 };
 
-const shoot = () => {
-  const conf = window.confetti || (typeof confetti !== 'undefined' ? confetti : null);
-  if (!conf) return;
+function shoot() {
+  if (typeof confetti !== 'undefined') {
+    confetti({
+      ...defaults,
+      particleCount: 35,
+      scalar: 2,
+      shapes: ['emoji'],
+    });
+  }
+}
 
-  conf({
-    ...defaults,
-    particleCount: 35,
-    scalar: 2,
-    shapes: ['emoji'],
-  });
-};
-
-const onGenerateClick = () => {
+function onGenerateClick() {
   const checkedInput = document.querySelector('input[name="password-length"]:checked');
   const passwordLength = parseInt(checkedInput.value, 10);
 
-  const newPassword = getEmojiPassword(passwordLength);
+  const newPassword = window.getEmojiPassword(passwordLength);
   emojiInput.value = newPassword;
 
   generateButton.classList.remove('blast');
@@ -39,9 +38,9 @@ const onGenerateClick = () => {
   setTimeout(shoot, 0);
   setTimeout(shoot, 100);
   setTimeout(shoot, 200);
-};
+}
 
-const onCopyClick = () => {
+function onCopyClick() {
   const passwordToCopy = emojiInput.value;
 
   navigator.clipboard.writeText(passwordToCopy)
@@ -53,11 +52,12 @@ const onCopyClick = () => {
       copyButton.textContent = 'Error ❌';
       setTimeout(() => { copyButton.textContent = 'Copy 📋'; }, 1500);
     });
-};
+}
 
 generateButton.addEventListener('click', onGenerateClick);
 copyButton.addEventListener('click', onCopyClick);
 
+// Initialize
 const initialCheckedInput = document.querySelector('input[name="password-length"]:checked');
 const initialLength = parseInt(initialCheckedInput.value, 10);
-emojiInput.value = getEmojiPassword(initialLength);
+emojiInput.value = window.getEmojiPassword(initialLength);

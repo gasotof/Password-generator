@@ -1,9 +1,5 @@
-import EMOJI_LIST from "./EMOJI_LIST.js";
-
-
-const getRandomEmoji = () => {
-  const index = Math.floor(Math.random() * EMOJI_LIST.length);
-  return EMOJI_LIST[index];
+// js/RANDOM_EMOJI.js
+window.getRandomEmoji = function() {
+  const index = Math.floor(Math.random() * window.EMOJI_LIST.length);
+  return window.EMOJI_LIST[index];
 };
-
-export default getRandomEmoji;

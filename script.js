@@ -1,10 +1,8 @@
-import getRandomEmoji from "./RANDOM_EMOJI.js";
-
-// Export only the emoji password generator
-export const getEmojiPassword = (length) => {
+// js/script.js
+window.getEmojiPassword = function(length) {
   const password = [];
   for (let i = 0; i < length; i++) {
-    password.push(getRandomEmoji());
+    password.push(window.getRandomEmoji());
   }
   return password.join(' ');
 };

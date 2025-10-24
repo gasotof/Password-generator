@@ -7,16 +7,6 @@
   --copy-cut: calc(var(--control-h) * 1.15); /* increase cap so slider ends sooner */
 }
 
-body {
-  background: radial-gradient(circle at top left, #ffd6ec, #ffaadf, #ff8ccf, #ff6cc2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  overflow: hidden;
-}
 
 .card {
   position: relative;
