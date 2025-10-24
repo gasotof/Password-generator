@@ -8,7 +8,7 @@
 }
 
 body {
-  background: none;
+  background: radial-gradient(circle at top left, #ffd6ec, #ffaadf, #ff8ccf, #ff6cc2);
   display: flex;
   justify-content: center;
   align-items: center;
