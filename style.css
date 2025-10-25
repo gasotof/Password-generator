@@ -176,8 +176,9 @@ h1 span {
 .length-selector .len {
   position: relative;
   cursor: pointer;
-  flex: 0 0 auto;
+  flex: 1;
 }
+
 .length-selector .len span {
   display: inline-block;
   background: rgba(255, 255, 255, 0.16);
@@ -216,7 +217,7 @@ h1 span {
   place-items: center;
   font-size: 12px;
   line-height: 1;
-  color: #fff;
+  color: skyblue;
   border-radius: 50%;
   background: radial-gradient(120% 120% at 30% 20%, #ff9cf0, #c17bff 70%);
   border: 2px solid rgba(255,255,255,0.85);
