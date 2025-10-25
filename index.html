@@ -1,97 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emoji Password Rainbow Candy Progress Bowl</title>
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emoji Password Rainbow Candy Progress Bowl</title>
-  <link rel="stylesheet" href="style.css" />
+    <!-- Bootstrap & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap & Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/style.css">
+  <body>
+    <!-- 💼 CECI -->
 
-</head>
-
-<body> <!-- 💼 CECI -->
-
-  <!-- 🍭 Emoji Carousel -->
-  <div class="carousel rounded-pill">
-    <div class="carousel-track">
-      <div class="emoji">🍭</div>
-      <div class="emoji">🌈</div>
-      <div class="emoji">🍬</div>
-      <div class="emoji">🍯</div>
-      <div class="emoji">🍩</div>
-      <div class="emoji">🧁</div>
-      <div class="emoji">🍰</div>
-      <div class="emoji">🍓</div>
-    </div>
-  </div>
-
-
-  <div class="progress-bar">
-    <div class="progress"></div>
-  </div>
-
-  <div class="card mt-5">
-    <h1 class="text-shadows">Emoji Pasword Rainbow<br><span>Candy Progress Bowl 🍭</span></h1>
-
-    <div class="input-group">
-      <input id="emoji-input" type="text" readonly placeholder="Click generate..." />
+    <!-- 🍭 Emoji Carousel -->
+    <div class="carousel rounded-pill">
+      <div class="carousel-track">
+        <div class="emoji">🍭</div>
+        <div class="emoji">🌈</div>
+        <div class="emoji">🍬</div>
+        <div class="emoji">🍯</div>
+        <div class="emoji">🍩</div>
+        <div class="emoji">🧁</div>
+        <div class="emoji">🍰</div>
+        <div class="emoji">🍓</div>
+      </div>
     </div>
 
-    <div class="length-selector">
-      <label class="len"><input type="radio" name="password-length" value="4"><span>4</span></label>
-      <label class="len"><input type="radio" name="password-length" value="6"><span>6</span></label>
-      <label class="len"><input type="radio" name="password-length" value="8"><span>8</span></label>
-      <label class="len"><input type="radio" name="password-length" value="10" checked><span>10</span></label>
-      <label class="len"><input type="radio" name="password-length" value="12"><span>12</span></label>
-      <button id="copy-btn" aria-label="Copy password">Copy</button>
+    <div class="progress-bar">
+      <div class="progress"></div>
     </div>
 
-    <button id="generate-btn" class="Button" type="button">
-      <svg class="Button-svg" viewBox="0 0 300 80" preserveAspectRatio="none" aria-hidden="true">
-        <rect class="Button-line Button-line--outer" x="1" y="1" width="298" height="78" rx="40" ry="40" fill="none" stroke="#f5e97a" stroke-width="2"/>
-        <rect class="Button-line Button-line--inner" x="6" y="6" width="288" height="68" rx="34" ry="34" fill="none" stroke="#ffe06c" stroke-width="2"/>
-      </svg>
-      <span class="Button-content">Generate</span>
-    </button>
-  </div>
-  
-   <div id="tsparticles"></div>
+    <div class="card mt-5">
+      <h1 class="text-shadows">
+        Emoji Pasword Rainbow<br /><span>Candy Progress Bowl 🍭</span>
+      </h1>
 
-   
+      <div class="input-group">
+        <input
+          id="emoji-input"
+          type="text"
+          readonly
+          placeholder="Click generate..."
+        />
+      </div>
 
- <div class="container text-center mt-5">
-    <h1>
-      <a href="About.html" class="about-link">About Us</a>
-    </h1>
-  </div>  
-  <!-- 💼 CECI -->
-  <!--  -------------------------------------------------------------------------- -->
+      <div class="length-selector">
+        <label class="len"
+          ><input type="radio" name="password-length" value="4" /><span
+            >4</span
+          ></label
+        >
+        <label class="len"
+          ><input type="radio" name="password-length" value="6" /><span
+            >6</span
+          ></label
+        >
+        <label class="len"
+          ><input type="radio" name="password-length" value="8" /><span
+            >8</span
+          ></label
+        >
+        <label class="len"
+          ><input type="radio" name="password-length" value="10" checked /><span
+            >10</span
+          ></label
+        >
+        <label class="len"
+          ><input type="radio" name="password-length" value="12" /><span
+            >12</span
+          ></label
+        >
+        <button id="copy-btn" aria-label="Copy password">Copy</button>
+      </div>
 
+      <button id="generate-btn" class="Button" type="button">
+        <svg
+          class="Button-svg"
+          viewBox="0 0 300 80"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <rect
+            class="Button-line Button-line--outer"
+            x="1"
+            y="1"
+            width="298"
+            height="78"
+            rx="40"
+            ry="40"
+            fill="none"
+            stroke="#f5e97a"
+            stroke-width="2"
+          />
+          <rect
+            class="Button-line Button-line--inner"
+            x="6"
+            y="6"
+            width="288"
+            height="68"
+            rx="34"
+            ry="34"
+            fill="none"
+            stroke="#ffe06c"
+            stroke-width="2"
+          />
+        </svg>
+        <span class="Button-content">Generate</span>
+      </button>
+    </div>
 
+    <div id="tsparticles"></div>
+
+    <div class="container text-center mt-5">
+      <h2>
+        <a href="About.html" class="about-link">About Us</a>
+      </h2>
+    </div>
+    <!-- 💼 CECI -->
+    <!--  -------------------------------------------------------------------------- -->
 
     <!--  -------------------------------------------------------------------------- -->
 
-   <!-- 💼 CECI -->
+    <!-- 💼 CECI -->
 
- <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.0.0/tsparticles.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
-  <script src="js/main1.js"></script>
-  <script src="js/animacionesPage.js"></script>
- <!-- 💼 CECI -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
+    <script src="js/main1.js"></script>
+    <script src="js/animacionesPage.js"></script>
+    <!-- 💼 CECI -->
 
-   <!--  -------------------------------------------------------------------------- -->
+    <!--  -------------------------------------------------------------------------- -->
 
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
-  <script type="module" src="./script.js"></script>
-  <script type="module" src="./animationsCard.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./animationsCard.js"></script>
+  </body>
 </html>
